@@ -7,71 +7,193 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>David Bolivar Professional Portfolio</title>
         <title>David Bolivar</title>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/index.css">
     </head>
     <body>
         <div>
-            <main>
-                <section id="welcome-section" class="welcome-section">
-                    <h1>I am David</h1>
-                    <h3>a junior developer</h3>
-                    <code>My interest for technology has led me to pursue a carreer in software engineering.</code>
+            <header>
+                <nav class="nav">
+                <ul class="menu" role="list">
+                    <li class="menu__item">
+                    <img class="heading_image" src="img/David Bolivar.jpg" role="presentation"/>
+                    </li>
+                    <li class="menu__item menu__item--large">
+                    <a class="link link--no-color " href="#">David Bolivar</a>
+                    </li>
+                </ul>
+        
+                <ul class="menu menu--hide-mobile" role="list">
+                    <li class="menu__item">
+                    <a class="link link--no-color" href="#welcome-section">About</a>
+                    </li>
+                    <li class="menu__item">
+                    <a class="link link--no-color" href="#skills">Skills</a>
+                    </li>
+                    <li class="menu__item">
+                    <a class="link link--no-color" href="#experience">Experience</a>
+                    </li>
+                    <li class="menu__item">
+                    <a class="link link--no-color" href="#projects">Projects</a>
+                    </li>
+                    <li class="menu__item">
+                    <a class="link link--no-color" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                </nav>
+            </header>
+            <div class="container">
+                <main>
+                    <section id="welcome-section" class="welcome-section">
+                        <h1>About</h1>
+                        <h3>a junior developer</h3>
+                        <code>My passion for technology has led me to pursue a career in software engineering.</code>
+                    </section>
+
+                </main>
+
+                <section id="skills">
+                    <h2>Skills</h2>
+                    <ul role="list">
+                
+                    </ul>
                 </section>
-                <section id="projects" class="projects-section">
-                    <h2 class="projects-section-header">These are some of my projects:</h2>
-                    <div class="projects-grid">
-                        <a href="https://replit.com/@DavidBolivar4/Rollthedicechallenge#main.py" target="_blank" class="project project-tile">
-                            <img class="project-image"
-                                src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Snake_eyes_dice.jpg"
-                                alt="project">
-                            <p class="project-title">
-                                Game: Roll the dice - Snake Eyes!
-                            </p>
-                        </a>
+
+                <section id="experience">
+                    <h2>Experience</h2>
+                    <ul role="list">
+                        <li class="card">
+                            <span><strong>Waiter</strong> &mdash; El Tapatio</span>
+                            <span class="emphasis">Nov 2020 - Present</span>
+                        </li>
+                        
+                        <li class="card">
+                            <span><strong>Data Analyst</strong> &mdash; El Tapatio</span>
+                            <span class="emphasis">Nov 2020 - Present</span>
+                        </li>
+                        
+                        <li class="card">
+                            <span><strong>Cloud Analyst</strong> &mdash; El Tapatio</span>
+                            <span class="emphasis">Nov 2020 - Present</span>
+                        </li>
+                        
+                        <li class="card">
+                            <span><strong>Junior Web Developer</strong> &mdash; El Tapatio</span>
+                            <span class="emphasis">Nov 2020 - Present</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="projects" id="projects">
+                    <h2 class="projects-title">Checkout my Projects!</h2>
+                    <div class="projects-container">
+                    <div class="project-container project-card">
+                        <a href="https://replit.com/@DavidBolivar4/Rollthedicechallenge#main.py" 
+                        target="_blank" class="project-link link link--no-color">
+                        <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Snake_eyes_dice.jpg"
+                        alt="project"
+                        loading="lazy"
+                        class="project-pic"
+                        />
+                        <h3 class="project-title">Roll the dice - Snake Eyes!</h3>
+                        <p class="project-details">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+                        ratione vel inventore labore commodi modi quos culpa aut saepe!
+                        Alias!
+                        </p>
+                        Check it Out</a>
+                    </div>
+
+                    <div class="project-container project-card">
+                        <a href="https://replit.com/@DavidBolivar4/Rollthedicechallenge#main.py" 
+                        target="_blank" class="project-link link link--no-color">
+                        <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Snake_eyes_dice.jpg"
+                        alt="project"
+                        loading="lazy"
+                        class="project-pic"
+                        />
+                        <h3 class="project-title">Roll the dice - Snake Eyes!</h3>
+                        <p class="project-details">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+                        ratione vel inventore labore commodi modi quos culpa aut saepe!
+                        Alias!
+                        </p>
+                        Check it Out</a>
+                    </div>
+                    <div class="project-container project-card">
+                        <a href="https://replit.com/@DavidBolivar4/Rollthedicechallenge#main.py" 
+                        target="_blank" class="project-link link link--no-color">
+                        <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Snake_eyes_dice.jpg"
+                        alt="project"
+                        loading="lazy"
+                        class="project-pic"
+                        />
+                        <h3 class="project-title">Roll the dice - Snake Eyes!</h3>
+                        <p class="project-details">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+                        ratione vel inventore labore commodi modi quos culpa aut saepe!
+                        Alias!
+                        </p>
+                        Check it Out</a>
+                    </div>
+                    </div>
+                </section>
+
+
+                <section id="contact" class="contact-section">
+                    <div class="contact-section-header">
+                        <h2>We can work together!</h2>
+                        <p>Feel free to reach out through the following platforms:</p>
+                    </div>
+                    <div class="contact-links">
+                        <a id="profile-link" href="https://github.com/dbolivar13" target="_blank" class="btn contact-details"><i
+                                class="fab fa-github"></i> GitHub</a>
+                        <a href="https://www.linkedin.com/in/bolivar13/" target= "_blank" class="btn contact-details"><i class="fab fa-linkedin"></i> Linkedin</a>
+                    </div>
+                </section>
+
+                <section id="contact">
+                    <h2>Leave a Message</h2>
+
+                    <form name="leave_message" action="index.html" method="post">
+                        <div class="field field--inline">
+                            <label class="field__label" for="contact_name">Name</label>
+                            <input class="field__input" type="text" id="contact_name" name="name" required=true>
                         </div>
+
+                        <div class="field field--inline">
+                            <label class="field__label"for="contact_email">Email Address</label>
+                            <input class="field__input" type="email" id="contact_email" name="email" required=true>
+                        </div>
+
+                        <div class="field">
+                            <label class="field__label" for="contact_message">Message</label>
+                            <textarea 
+                            class="field__input" 
+                            id="contact_message" 
+                            name="message" 
+                            required=true
+                            ></textarea>
+                        </div>
+
+                        <button class="button" type="submit">Submit</button>
+                    </form>
                 </section>
-            </main>
-            <section id="skills">
-                <h2>Skills</h2>
-                <ul>
-              
-                </ul>
-            </section>
-            <section id="contact" class="contact-section">
-                <div class="contact-section-header">
-                    <h2>We can work together!</h2>
-                    <p>Feel free to reach out through the following platforms:</p>
-                </div>
-                <div class="contact-links">
-                    <a id="profile-link" href="https://github.com/dbolivar13" target="_blank" class="btn contact-details"><i
-                            class="fab fa-github"></i> GitHub</a>
-                    <a href="https://www.linkedin.com/in/bolivar13/" target= "_blank" class="btn contact-details"><i class="fab fa-linkedin"></i> Linkedin</a>
-                </div>
-            </section>
-            <section>
-                <h2>Leave a Message</h2>
-                <form action="index.html" method="post" name="leave_message">
-                    <label for="contact_name">Name</label><br>
-                    <input type="text" id="contact_name" name="name" required=true><br>
-                    <label for="contact_email">Email</label><br>
-                    <input type="email" id="contact_email" name="email" required=true><br>
-                    <label for="contact_message">Message</label><br>
-                    <textarea id="contact_message" name="message" required=true></textarea><br>
-                    <button type="submit">Submit</button>
-                </form>
-            </section>
-            <section id="messages">
-                <h2>Messages</h2>
-                <ul>
 
-                </ul>
+                <section id="messages" style="display:none">
+                    <h2>Messages</h2>
 
-            </section>
+                    <ul class="list" role="list">
+
+                    </ul>
+
+                </section>
+            </div>
             <footer>
-                <p>Built by <a href="#">David Bolivar</a>
-                </p>
-                <p>
-                    &copy; Created for
-                    <a href="https://codethedream.org/" target="_blank">CodeTheDream<i class="fab fa-code-the-dream"></i></a>
+                <p> Created by &copy;<a href="#" class="link link--no-color">David Bolivar</a> for <a href="https://codethedream.org/" target="_blank" class="link link--no-color">CodeTheDream</a>
                 </p>
             </footer>
         </div>
