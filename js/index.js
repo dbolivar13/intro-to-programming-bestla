@@ -104,40 +104,73 @@ document.getElementById("mySidebar").style.width = "0";
 document.getElementById("main").style.marginLeft = "0";
 }
 
-const githubRequest = new XMLHttpRequest();
-githubRequest.open('GET', 'https://api.github.com/users/dbolivar13/repos')
-githubRequest.send();
-githubRequest.addEventListener('load', function () {
-  const repositories = JSON.parse(this.response);
-  console.log(repositories);
-  const projectSection = document.getElementById('projects');
-  const projectList = projectSection.querySelector('div');
+// const githubRequest = new XMLHttpRequest();
+// githubRequest.open('GET', 'https://api.github.com/users/dbolivar13/repos')
+// githubRequest.send();
+// githubRequest.addEventListener('load', function () {
+//   const repositories = JSON.parse(this.response);
+//   console.log(repositories);
+//   const projectSection = document.getElementById('projects');
+//   const projectList = projectSection.querySelector('div');
 
-  for (let i = 0; i < repositories.length; i +=1) {
-    let project = document.createElement('div');
-    project.classList.add('project-container', 'project-card');
-    // project.innerHTML = repositories[i].name;
-    project.innerHTML = 
-    `<a href="${repositories[i].html_url}" 
-    target="_blank" class="project-link link link--no-color">
-    <img
-    src="https://www.nopio.com/wp-content/uploads/2016/05/web-development.jpg"
-    alt="project"
-    loading="lazy"
-    class="project-pic"
-    />
-    <h3 class="project-title">${repositories[i].name}</h3>
-    <p class="project-details">
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
-    ratione vel inventore labore commodi modi quos culpa aut saepe!
-    Alias!
-    </p>
-    Check it Out</a>`;
-    projectList.appendChild(project);
+//   for (let i = 0; i < repositories.length; i +=1) {
+//     let project = document.createElement('div');
+//     project.classList.add('project-container', 'project-card');
+//     // project.innerHTML = repositories[i].name;
+//     project.innerHTML = 
+//     `<a href="${repositories[i].html_url}" 
+//     target="_blank" class="project-link link link--no-color">
+//     <img
+//     src="https://www.nopio.com/wp-content/uploads/2016/05/web-development.jpg"
+//     alt="project"
+//     loading="lazy"
+//     class="project-pic"
+//     />
+//     <h3 class="project-title">${repositories[i].name}</h3>
+//     <p class="project-details">
+//     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+//     ratione vel inventore labore commodi modi quos culpa aut saepe!
+//     Alias!
+//     </p>
+//     Check it Out</a>`;
+//     projectList.appendChild(project);
 
 
-  };
+//   };
 
-})
+// });
+
+fetch('https://api.github.com/users/dbolivar13/repos')
+  .then((res) => res.json())
+  .then((data) => {
+    const repositories = data;
+    const projectSection = document.getElementById('projects');
+    const projectList = projectSection.querySelector('div');
+
+    for (let i = 0; i < repositories.length; i +=1) {
+      let project = document.createElement('div');
+      project.classList.add('project-container', 'project-card');
+      // project.innerHTML = repositories[i].name;
+      project.innerHTML = 
+      `<a href="${repositories[i].html_url}" 
+      target="_blank" class="project-link link link--no-color">
+      <img
+      src="https://www.nopio.com/wp-content/uploads/2016/05/web-development.jpg"
+      alt="project"
+      loading="lazy"
+      class="project-pic"
+      />
+      <h3 class="project-title">${repositories[i].name}</h3>
+      <p class="project-details">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+      ratione vel inventore labore commodi modi quos culpa aut saepe!
+      Alias!
+      </p>
+      Check it Out</a>`;
+      projectList.appendChild(project);
+    };
+  })
+  .catch(error => console.log('Looks like there was a problem', error))
+
 
 
