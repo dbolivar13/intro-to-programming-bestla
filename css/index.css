@@ -1,23 +1,4 @@
-
-:root {
-  --color-darkest: #000;
-  --color-darker: #2b2b4a;
-  --color-dark: #55556e;
-  --color-medium: #808092;
-  --color-light: #d5d5db;
-  --color-lighter: #f7f5f9;
-  --color-lightest: #fff;
-  --color-navy: navy;
-  --color-primary: #0072e0;
-  --color-danger: #dc2626;
-
-  --rounded: 3px;
-  --rounded-full: 999px;
-}
-
-
 /* Change the background color of the page body */
-
 /* Change the default text color */
 
 body {
@@ -71,12 +52,13 @@ footer {
 h1 {
   font-size: 32px;
   font-weight: lighter;
-  /* color: var(--color-navy); */
+ 
 }
 
 h2 {
   font-size: 32px;
   font-weight: lighter;
+
 }
 
 h3 {
@@ -117,7 +99,7 @@ h3 {
 
 .heading_image {
   width: 100px;
-  border-radius: var(--rounded-full);
+  border-radius: 999px;
 }
 
 /* Handling link aspect */
@@ -143,12 +125,15 @@ h3 {
 
 /* Transform the "Skills" list items into styled blocks */
 .tag {
-  border-radius: var(--rounded);
+  border-radius: 50%;
   border: 2px solid #3fc5a8	;
   color: #3fc5a8	;
   display: inline-block;
-  padding: 0.25rem 0.75rem;
+  padding: 0.35rem 0.75rem;
   margin-bottom: 0.5rem;
+  height: 2.5rem;
+  width: 6.5rem;
+  text-align: center;
 }
 
 .tag:not(:last-child) {
@@ -159,7 +144,7 @@ h3 {
 /* Transform the "Experience" list items into styled blocks */
 .card {
   background-color: #3f666b;
-  border-radius: var(--rounded);
+  border-radius: 3px;
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -176,6 +161,19 @@ font-style: italic;
 color: whitesmoke;
 
 }
+
+/* Contact links */
+.contact-links {
+  display: inline-block;
+  padding: 1rem 0rem;
+}
+
+.contact-details {
+  font-size: large;
+  padding: 0rem 0.5rem;
+}
+
+
 
 /* Style the "Leave a Message" form elements
 Change font size and color of labels
@@ -215,8 +213,8 @@ display: block;
 
 .button {
   background-color: #3f666b	;
-  border-radius: var(--rounded);
-  color: var(--color-lightest);
+  border-radius: 3px;
+  color: white;
   min-width: 100px;
   padding: 0.5rem 1rem;
   transition: opacity 0.2s ease-in-out;
@@ -227,13 +225,14 @@ font-size: 1.125rem;
 }
 
 .button--minimal {
-background-color: var(--color-dark);
+background-color: #3f666b;
 color: white;
 margin-left: auto;
 }
 
 .button--danger {
-background-color: var(--color-danger);
+background-color: red;
+color: white;
 margin-left: 1rem;
 }
 
@@ -262,24 +261,13 @@ footer > p {
 }
 
 
-.projects {
-  background-color: var(--bg-color);
-  padding: 32px 0;
-  margin-top: 0rem;
-}
-
 .project-pic {
-  width: max-content;
   height: 10rem;
-  border-radius: var(--rounded-full)
-  
-
+  border-radius: 3px;
 }
 
 .projects-container {
   display: flex; 
-  margin: auto; 
-
 } 
 
 .projects-title {
@@ -290,13 +278,14 @@ footer > p {
 .project-container {
   text-align: center;
   width: 250px;
-  padding: 0.2rem 0.2rem;
-  
+  align-items: center;
+  margin: auto;
+  padding: 20px 20px;
 }
 
 
 .project-details {
-  margin-bottom: var(--bottom-margin);
+  margin-bottom: 2px;
   font-weight: lighter;
   color: black;
 }
@@ -310,26 +299,26 @@ footer > p {
 
 .project-card {
   background-color: whitesmoke;
-  border-radius: 11px;
-  box-shadow: 0 3px 10px var(--primary-shadow);
-  padding: 20px 20px;
-  margin: auto; 
-  
+  border-radius: 10px;
+  box-shadow: 0 3px 10px gray;
+  height: 25rem;
+  align-items: center;
 }
 
 .project-link {
   font-weight: bolder;
   color:  #3f666b;
-
 }
 
 .message {
   background-color: whitesmoke;
-  border-radius: var(--rounded);
+  border-radius: 3px;
   align-items: right;
   display: flex;
   padding: 1rem 1rem;
   color: #000;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 
@@ -358,7 +347,7 @@ transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
 
 .sideButton {
   background-color: #3fc5a8;
-  border-radius: var(--rounded);
+  border-radius: 3px;
   color: white;
   min-width: 100px;
   padding: 0.5rem 1rem;
@@ -390,7 +379,7 @@ transition: 0.3s;
   }
   .message {
     background-color: whitesmoke;
-    border-radius: var(--rounded);
+    border-radius: 3px;
 
   }
   

@@ -7,7 +7,7 @@ p_element.innerHTML = `${p_element.innerHTML} ${thisYear}`;
 
 
 // Create List of Skills 
-const lst_skills = ["HTML","CSS","JavaScript","Python","R"];
+const lst_skills = ["HTML","CSS","JavaScript","Python","R", "SQL"];
 const skillsSection = document.getElementById('skills');
 const skillsList = skillsSection.querySelector('ul');
 
@@ -49,7 +49,12 @@ messageForm.addEventListener('submit', (e) => {
     removeButton.classList.add('button','button--danger')
     removeButton.addEventListener('click', (e) => {
         const entry= e.target.parentNode;
-        messageList.remove(entry);
+        const list = entry.parentNode;
+        // if there are no other messages, hide the section
+        if (list.children.length <= 1) {
+          messageSection.style.display = 'none'
+        }
+        messageList.removeChild(entry);
     });
      // create edit button
     const editButton = document.createElement('button');
@@ -91,6 +96,7 @@ messageForm.addEventListener('submit', (e) => {
     messageForm.reset();
 
 });
+
 
 /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
 function openNav() {
@@ -142,6 +148,7 @@ document.getElementById("main").style.marginLeft = "0";
 
 fetch('https://api.github.com/users/dbolivar13/repos')
   .then((res) => res.json())
+  // .then((data) => console.log(data))
   .then((data) => {
     const repositories = data;
     const projectSection = document.getElementById('projects');
@@ -171,6 +178,3 @@ fetch('https://api.github.com/users/dbolivar13/repos')
     };
   })
   .catch(error => console.log('Looks like there was a problem', error))
-
-
-
